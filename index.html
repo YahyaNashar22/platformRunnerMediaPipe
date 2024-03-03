@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  <title>Codey Tundra</title>
+  <style>
+    canvas {
+      width: 500px;
+    }
+    body{
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="liveView" class="videoView">
+    <button id="webcamButton" class="mdc-button mdc-button--raised">
+      <span class="mdc-button__ripple"></span>
+      <span class="mdc-button__label">ENABLE WEBCAM</span>
+    </button>
+    <div>
+      <video id="webcam" style="display: none;" autoplay playsinline></video>
+      <canvas class="output_canvas" id="output_canvas"></canvas>
+    </div>
+  </div>
+  <script src="handInputs.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
+  <script defer src="game.js"></script>
+</body>
+
+</html>
