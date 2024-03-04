@@ -101,13 +101,13 @@ const middleThumbDistance = Math.sqrt(
 );
 
     // If the distance is below a threshold, perform an action (e.g., rotate the cube)
-        if(distance<0.1){
+        if(distance<0.15){
             return "jump"
         }
-        else if(middleThumbDistance<0.15){
+        else if(pinkyThumbDistance<0.15){
             return "moveForward"
         }
-        else if(ringThumbDistance<0.1){
+        else if(ringThumbDistance<0.15){
             return "moveBackward"
         }else{
             return ""
