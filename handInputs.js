@@ -41,8 +41,11 @@ if (hasGetUserMedia()) {
 
   function enableCam(event) {
     if (!handLandmarker) {
-      console.log("Wait! objectDetector not loaded yet.");
+      alert("Wait! objectDetector not loaded yet.");
+      enableWebcamButton.innerText = "loading . . ."
       return;
+    }else{
+      enableWebcamButton.innerText = "ENABLE PREDICTIONS"
     }
   
     if (webcamRunning === true) {
@@ -54,7 +57,7 @@ if (hasGetUserMedia()) {
     }
      // getUsermedia parameters.
   const constraints = {
-    video: true
+    video: {facingMode: "environment"}
   };
 
   // Activate the webcam stream.

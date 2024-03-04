@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
   <title>Codey Tundra</title>
@@ -17,6 +18,11 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+    }
+    @media(max-width:500px){
+      body{
+        flex-direction: column;
+      }
     }
   </style>
 
